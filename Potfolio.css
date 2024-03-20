@@ -2,16 +2,25 @@
     padding:0 ;
 }
     body {
+      
+      background-color: white;
+      color: black;
+      
+  }
+
+  .dark-mode {
+      background-color: black;
+      color: white;
+  }
         
-        
-    }
+    
     nav{
         
         display: flex;
         justify-content: space-around ;
         align-items: center;
        height: 35px;
-       background: #050C1B linear-gradient(90deg, #050C1B, #1A4055 15%, #1A4055 35%, #050C1B 50%);
+       background: #050C1B linear-gradient(90deg, #050C1B, #ff9604 15%, #bd5b00 35%, #050C1B 50%);
     }
     nav ul {
         display: flex;
@@ -78,112 +87,62 @@ font-weight: 500;
        margin: -73px;
     }
     .Center{
-      align-items: center;
-      margin-right: 1px;
-      padding-right: 3px;
-    }
-    .but{
+      padding: 70px 0;
 
+
+      text-align: center;
     }
-button {
+   .para{
+    font-weight: 500;
+    font-size: 2rem;
+   }
+   .btn {
     position: relative;
-    background: #444;
-    color: #fff;
-    text-decoration: none;
+    font-size: 17px;
     text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
     border: none;
-    letter-spacing: 0.1rem;
-    font-size: 1rem;
-    padding: 12px 19px;
-    transition: 0.2s;
-  }
-  
-  button:hover {
-    letter-spacing: 0.2rem;
-    padding: 1.1rem 3.1rem;
-    background: var(--clr);
-    color: var(--clr);
-    /* box-shadow: 0 0 35px var(--clr); */
-    animation: box 3s infinite;
-  }
-  
-  button::before {
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+   }
+   
+   .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn::after {
     content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
     position: absolute;
-    inset: 2px;
-    background: #272822;
-  }
-  
-  button span {
-    position: relative;
-    z-index: 1;
-  }
-  button i {
-    position: absolute;
-    inset: 0;
-    display: block;
-  }
-  
-  button i::before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 2px;
-    left: 80%;
-    top: -2px;
-    border: 2px solid var(--clr);
-    background: #272822;
-    transition: 0.2s;
-  }
-  
-  button:hover i::before {
-    width: 15px;
-    left: 20%;
-    animation: move 3s infinite;
-  }
-  
-  button i::after {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 2px;
-    left: 20%;
-    bottom: -2px;
-    border: 2px solid var(--clr);
-    background: #272822;
-    transition: 0.2s;
-  }
-  
-  button:hover i::after {
-    width: 15px;
-    left: 80%;
-    animation: move 3s infinite;
-  }
-  
-  @keyframes move {
-    0% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(5px);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes box {
-    0% {
-      box-shadow: #27272c;
-    }
-    50% {
-      box-shadow: 0 0 25px var(--clr);
-    }
-    100% {
-      box-shadow: #27272c;
-    }
-  }
-  
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+   }
+   
+   .btn::after {
+    background-color: #fff;
+   }
+   
+   .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+   }
 .second h2{
   margin: 53px;
   font-size: 2rem;

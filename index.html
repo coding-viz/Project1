@@ -29,14 +29,16 @@
         </div>
 
         <div class="rightsection">
-            <button style="--clr:#00f735"><span>Sign up</span></button>
-            <button  style="--clr:#00f735"><span>Log In</span></button>
+            <button class="btn"><span>Sign up</span></button>
+            <button class="btn"><span>Log In</span></button>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
         </div>
 
         
     </section>
     <section class="Center">
-        <div class="phara">
+        <div class="para">
             Check Your Skills 
             <div class="but">
                 <button><span>Sign up</span></button>
@@ -76,7 +78,13 @@
 
 
     </footer></div>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+    <script class="dark-mode">
+        function toggleDarkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
    
  
 </body>
