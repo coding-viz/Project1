@@ -8,9 +8,10 @@
       
   }
 
-  .dark-mode {
+  .dark-mode  {
       background-color: black;
       color: white;
+      
   }
         
     
@@ -20,7 +21,7 @@
         justify-content: space-around ;
         align-items: center;
        height: 35px;
-       background: #050C1B linear-gradient(90deg, #050C1B, #ff9604 15%, #bd5b00 35%, #050C1B 50%);
+       background: #050C1B linear-gradient(90deg, #050C1B, #f54300 15%, #c95d23 35%, #050C1B 50%);
     }
     nav ul {
         display: flex;
@@ -30,9 +31,7 @@
     }
     nav ul li{
         list-style: none;
-        margin: 0 2px;
-        
-        
+        margin: 0 2px;  
     }
     nav ul li a{
         text-decoration: none;
@@ -41,9 +40,6 @@
     }
     nav ul li a:hover{
         color: #f34c05;
-        
-
-
     }
     
     main hr{
@@ -82,7 +78,15 @@ font-weight: 500;
     .rightsection{
        padding: -71px;
        margin: -73px;
+       margin-inline-end: -126px;
     }
+    .SW{
+      padding: 1px;
+      margin: 1px;
+      margin-inline-start: 1306px;
+      margin-top: -149px;
+    }
+
     .Center{
       padding: 70px 0;
 
@@ -94,119 +98,83 @@ font-weight: 500;
     font-size: 2rem;
    }
    /* Button CSS */
-   .btn {
-    position: relative;
-    font-size: 17px;
+   button {
+    padding: 1.3em 3em;
+    font-size: 12px;
     text-transform: uppercase;
-    text-decoration: none;
-    padding: 1em 17px;
-    display: inline-block;
-    border-radius: 6em;
-    transition: all .2s;
-    border: none;
-    font-family: inherit;
+    letter-spacing: 2.5px;
     font-weight: 500;
-    color: black;
-    background-color: white;
-   }
-   
-   .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-   }
-   
-   .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-   }
-   
-   .btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-   }
-   
-   .btn::after {
+    color: #000;
     background-color: #fff;
-   }
-   
-   .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-   }
- /* Toggle switch CSS */
-   .toggle-switch {
-    position: relative;
-    width: 100px;
-    height: 50px;
-    --light: #d8dbe0;
-    --dark: #28292c;
-    --link: rgb(27, 129, 112);
-    --link-hover: rgb(24, 94, 82);
-    margin: -76px;
-    padding: 1px;
-
-  }
-  
-  .switch-label {
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    background-color: var(--dark);
-    border-radius: 25px;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
     cursor: pointer;
-    border: 3px solid var(--dark);
+    outline: none;
   }
   
-  .checkbox {
-    position: absolute;
-    display: none;
+  button:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
   }
   
-  .slider {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+  button:active {
+    transform: translateY(-1px);
   }
+ 
+
+
+ /* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
   
-  .checkbox:checked ~ .slider {
-    background-color: var(--light);
-  }
-  
-  .slider::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
-    box-shadow: inset 12px -4px 0px 0px var(--light);
-    background-color: var(--dark);
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-  }
-  
-  .checkbox:checked ~ .slider::before {
-    -webkit-transform: translateX(50px);
-    -ms-transform: translateX(50px);
-    transform: translateX(50px);
-    background-color: var(--dark);
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border: 2px solid #414141;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: #f54300;;
+  border-radius: inherit;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.switch input:checked + .slider {
+  box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+  border: 2px solid #0974f1;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
 .second h2{
   margin: 53px;
   font-size: 2rem;
